@@ -1,7 +1,8 @@
 ## Nex Chat
 Chat in Socket IO, using flutter and next.js
 
-![GitHub Logo](assets/screens/login-v1.jpeg)
+
+<img src="assets/screens/login-v1.jpeg" alt="drawing" width="200"/> 
 
 Wellcome to the future
 
