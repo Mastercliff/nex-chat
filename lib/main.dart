@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nex_chat/app/views/bottom_bar/bottom_bar.view.dart';
+import 'package:nex_chat/app/views/bottom_bar/chats/into.view.dart';
 import 'package:nex_chat/app/views/login/login.view.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class App extends StatelessWidget {
       ),
       routes: {
         '/login' : (context) => LoginView(),
-        '/bottomBar' : (context) => BottomBarView()
+        '/bottomBar' : (context) => BottomBarView(),
+        '/chatInto' : (context) => ChatIntoView()
       },
       initialRoute: '/login',
     );

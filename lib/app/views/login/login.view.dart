@@ -186,7 +186,7 @@ class DontHaveAccount extends StatelessWidget {
         FlatButton(
         padding: EdgeInsets.only(left:2),
         child: Text(
-        'Cadastra-se',
+        'Cadastre-se',
         style: TextStyle(
           fontFamily: 'Nunito',
           fontSize: 13,

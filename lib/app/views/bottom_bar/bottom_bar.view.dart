@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nex_chat/app/views/bottom_bar/chats.view.dart';
+import 'package:nex_chat/app/views/bottom_bar/chats/chats.view.dart';
 import 'package:nex_chat/app/views/bottom_bar/groups.view.dart';
 import 'package:nex_chat/app/views/bottom_bar/settings.view.dart';
 
@@ -18,7 +18,7 @@ List<Widget> views =[
 ];
 
 List backColors = [
-  Colors.deepPurpleAccent[700],
+  Colors.white10,
   Colors.deepPurpleAccent[400],
   Colors.deepPurple[900],
 ];
@@ -29,7 +29,7 @@ class _BottomBarViewState extends State<BottomBarView>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black12,
       body: views[actIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -47,7 +47,7 @@ class _BottomBarViewState extends State<BottomBarView>{
             ),
         ],
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.black54,
+        unselectedItemColor: Colors.white54,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: backColors[actIndex],
@@ -60,8 +60,8 @@ class _BottomBarViewState extends State<BottomBarView>{
         ),
 
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          backgroundColor: Colors.deepPurpleAccent[700],
+          child: Icon(Icons.add, size: 32,),
+          backgroundColor: Colors.transparent,
           onPressed: (){
 
           },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nex_chat/app/models/chat/chat.model.dart';
 
 class ChatsView extends StatefulWidget {
   @override
@@ -32,7 +33,7 @@ class ChatsView extends StatefulWidget {
             color: Colors.white60,
             size: 20,
             ),),
-          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+          contentPadding: EdgeInsets.symmetric(vertical: 13, horizontal: 20),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide(color: Colors.black12, width: 0)
@@ -53,23 +54,25 @@ class _ChatsViewState extends State<ChatsView> {
     return Padding(
       padding: EdgeInsets.only(),
       child: ListView.builder(
-        itemCount: 4 * 2,
+        itemCount: 4  + 1,
         itemBuilder: (context, index){
-        if(index.isOdd){
-          return Divider(color: Colors.black38,);
+        if(index == 0){
+          return Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+            child: textFormModel('Buscar', Icons.search),
+          );
         }
-        return ChatModel(userName: 'User Name', photo: 'https://i.stack.imgur.com/l60Hf.png', lastMessage: 'Fala ai $index',);
+        index = index - 1;
+        return Chat(ChatModel(userName: 'User Name $index', photo: 'https://i.stack.imgur.com/l60Hf.png', lastMessage: 'Fala ai $index', isOnline: false));
       }),
     );
   }
 }
 
-class ChatModel extends StatelessWidget {
-  String userName;
-  String lastMessage;
-  String photo;
+class Chat extends StatelessWidget {
+  ChatModel chatModel;
 
-  ChatModel({this.userName, this.lastMessage, this.photo});
+  Chat(this.chatModel);
 
   @override
   Widget build(BuildContext context) {
@@ -84,13 +87,13 @@ class ChatModel extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-          backgroundImage: NetworkImage(this.photo),
+          backgroundImage: NetworkImage(this.chatModel.photo),
           radius: 28,
             )
           ],
         ),
           title: Text(
-            this.userName,
+            this.chatModel.userName,
             style: TextStyle(
               color: Colors.white70,
               fontFamily: 'Nunito',
@@ -101,7 +104,7 @@ class ChatModel extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
               Text(
-              this.lastMessage,
+              this.chatModel.lastMessage,
               style: TextStyle(
               color: Colors.white70,
               fontFamily: 'Nunito',
@@ -115,11 +118,13 @@ class ChatModel extends StatelessWidget {
             children: [
               FaIcon(
                 FontAwesomeIcons.angleDoubleRight,
-                color: Colors.blue,
+                color: Colors.white,
               )
             ],
           ),
-          onTap: (){},
+          onTap: (){
+            Navigator.pushNamed(context, '/chatInto', arguments: this.chatModel);
+          },
         )
         ],
       )
