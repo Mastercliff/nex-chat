@@ -2,9 +2,7 @@
 Chat in Socket IO, using flutter and next.js
 
 
-<img src="assets/screens/login-v1.png" alt="drawing" width="100"/> 
-<img src="assets/screens/chats-v1.png" alt="drawing" width="100"/> 
-<img src="assets/screens/into_chats-v1.png" alt="drawing" width="100"/> 
+<img src="assets/screens/login-v1.png" alt="drawing" width="150"/> <img src="assets/screens/chats-v1.png" alt="drawing" width="150"/> <img src="assets/screens/into_chats-v1.png" alt="drawing" width="150"/> 
 
 Wellcome to the future
 
