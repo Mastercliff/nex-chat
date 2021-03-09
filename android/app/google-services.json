@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "813981903709",
+    "project_id": "nexapi-me",
+    "storage_bucket": "nexapi-me.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813981903709:android:073beed4a6c111821b96b4",
+        "android_client_info": {
+          "package_name": "com.cliffing.nex.nex_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813981903709-lk77gc72ar2f8r0mtmd6ofean76eaa2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cliffing.nex.nex_chat",
+            "certificate_hash": "897c4f4b1e92204c6f6a4e4d4c1897f18f08501f"
+          }
+        },
+        {
+          "client_id": "813981903709-lkausek0jkmgkvcqql2u3mssopa0im0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLA7IQK_lXkGKoO9y5N10dkQb3jCatUGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813981903709-lkausek0jkmgkvcqql2u3mssopa0im0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

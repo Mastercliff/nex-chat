@@ -1,4 +1,4 @@
-package com.example.nex_chat
+package com.cliffing.nex.nex_chat
 
 import io.flutter.embedding.android.FlutterActivity
 
